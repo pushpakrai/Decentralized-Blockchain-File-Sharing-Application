@@ -1,14 +1,7 @@
+
 # Decentralized File Sharing Project (D-FILE)
 
-This repository contains the code for a decentralized D-FILE project built using Harhat, Smart Contract (Solidity), and React.js. The project aims to provide a secure and decentralized storage solution similar to Google Drive, where users can store and retrieve their files using blockchain technology.
-
-|  connect wallet | share Access |
-| ------- | ------- |
-|![Screenshot from 2023-06-05 11-14-17](https://github.com/Deepesh76780/DecentralizedFileSharing/assets/99245631/22eb2805-80aa-4fc4-be02-c696fe985148) | ![Screenshot from 2023-06-05 11-15-32](https://github.com/Deepesh76780/DecentralizedFileSharing/assets/99245631/bafe6739-ea36-4d3a-a7c6-b4f26bd5d743) |
-
-| Shared Data Access | List of shared data address|
-| ------- | ------- |
-| ![Screenshot from 2023-06-05 11-16-21](https://github.com/Deepesh76780/DecentralizedFileSharing/assets/99245631/425d7dca-0eda-4bbf-b9fb-0b9df4d3e3fe) | ![Screenshot from 2023-06-05 11-17-29](https://github.com/Deepesh76780/DecentralizedFileSharing/assets/99245631/c7488b78-0a94-4f6f-b8ea-41227cff4b2c) |
+This repository contains the code for the **D-FILE** project, a decentralized file storage solution similar to Google Drive, built using **Hardhat**, **Solidity (Smart Contracts)**, and **React.js**. The application leverages blockchain technology to ensure secure and transparent storage and access control for files.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -20,71 +13,111 @@ This repository contains the code for a decentralized D-FILE project built using
 
 ## Installation
 
-To install and run the decentralized GDrive project on your local machine, please follow these steps:
+To set up and run the D-FILE project on your local machine, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/decentralized-gdrive.git`
-2. Navigate to the project directory: `cd decentralized-gdrive`
-3. Install the dependencies for the smart contract:
-   - Make sure you have [Node.js](https://nodejs.org) installed.
-   - Install Hardhat: `npm install hardhat`
-4. Install the dependencies for the frontend:
-   - Navigate to the `frontend` directory: `cd frontend`
-   - Install Node.js dependencies: `npm install`
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/decentralized-gdrive.git
+   ```
+
+2. **Navigate to the project directory**:
+   ```bash
+   cd decentralized-gdrive
+   ```
+
+3. **Install dependencies for the smart contract**:
+   - Ensure you have [Node.js](https://nodejs.org) installed.
+   - Install Hardhat:
+     ```bash
+     npm install hardhat
+     ```
+
+4. **Install dependencies for the frontend**:
+   - Navigate to the `frontend` directory:
+     ```bash
+     cd frontend
+     ```
+   - Install the Node.js dependencies:
+     ```bash
+     npm install
+     ```
 
 ## Usage
 
-1. Start a local blockchain network using Hardhat: `npx hardhat node`
-2. Deploy the smart contract to the local network:
-   - Navigate to the project directory: `cd decentralized-gdrive`
-   - Compile the smart contract: `npx hardhat run --network localhost scripts/deploy.js`
-3. Start the frontend development server:
-   - Navigate to the `client` directory: `cd client`
-   - Run the development server: `npm start`
-4. Open your web browser and visit `http://localhost:3000` to access the decentralized GDrive application.
-5. connect your local server with metamask
+1. **Start a local blockchain network** using Hardhat:
+   ```bash
+   npx hardhat node
+   ```
+
+2. **Deploy the smart contract** to the local network:
+   - Navigate to the project directory:
+     ```bash
+     cd decentralized-gdrive
+     ```
+   - Compile and deploy the smart contract:
+     ```bash
+     npx hardhat run --network localhost scripts/deploy.js
+     ```
+
+3. **Start the frontend development server**:
+   - Navigate to the `client` directory:
+     ```bash
+     cd client
+     ```
+   - Run the development server:
+     ```bash
+     npm start
+     ```
+
+4. **Open your browser** and go to `http://localhost:3000` to access the decentralized GDrive application.
+
+5. **Connect the frontend** to your local blockchain using MetaMask.
 
 ## Architecture
 
-The decentralized GDrive project is built using the following technologies:
+The **D-FILE** project is structured with the following key technologies:
 
-- **Harhat**: A development environment for Ethereum smart contracts that provides testing and deployment capabilities.
-- **Smart Contract (Solidity)**: The smart contract is responsible for managing the file storage, access control, and ownership on the blockchain.
-- **React.js**: The frontend is developed using React.js, a popular JavaScript library for building user interfaces.
-- **Pinata**: Pinata is used as the decentralized file storage service for storing the files securely.
-
+- **Hardhat**: A development environment for Ethereum smart contracts that facilitates testing, deployment, and contract interaction.
+- **Solidity (Smart Contract)**: The smart contract manages file storage, access control, and ownership directly on the blockchain.
+- **React.js**: The frontend is built using React.js, providing a responsive, user-friendly interface for interacting with the blockchain.
+- **Pinata**: Pinata is utilized as a decentralized file storage solution to securely store files.
 
 ## Smart Contract
 
-The smart contract is written in Solidity, the programming language used for Ethereum smart contracts. It provides the following functionality:
+The smart contract, written in Solidity, handles the following functionality:
 
-- File upload and storage on the blockchain.
-- Access control mechanisms to ensure only authorized users can modify or access files.
-- Ownership transfer of files between users.
+- **File Upload**: Files are uploaded to decentralized storage and linked to the blockchain.
+- **Access Control**: Ensures only authorized users can access, modify, or delete files.
+- **File Ownership**: Allows users to transfer file ownership securely through blockchain transactions.
 
-The smart contract is located in the `contracts` directory.
+The smart contract code can be found in the `contracts` directory.
 
 ## Frontend
 
-The frontend of the decentralized GDrive project is built using React.js. It provides a user-friendly interface to interact with the smart contract and perform the following actions:
+The frontend of **D-FILE** is built with React.js and communicates with the smart contract to provide the following features:
 
-- Upload files to the decentralized storage.
-- View and download files stored on the blockchain.
-- Manage file access permissions.
-- Transfer file ownership.
+- **File Upload**: Users can upload files to decentralized storage.
+- **File Access**: Users can view and download files stored on the blockchain.
+- **Access Permissions**: Manage permissions to allow or restrict file access.
+- **Ownership Transfer**: Securely transfer file ownership to other users.
 
 The frontend code is located in the `client` directory.
 
 ## Contributing
 
-Contributions to the decentralized GDrive project are welcome! If you would like to contribute, please follow these steps:
+We welcome contributions to the **D-FILE** project! To contribute:
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix: `git checkout -b my-feature`.
-3. Make the necessary changes and commit your code: `git commit -am 'Add new feature'`.
-4. Push the changes to your forked repository: `git push origin my-feature`.
-5. Submit a pull request describing your changes.
-
-
-
-
-
+1. **Fork the repository**.
+2. **Create a new branch** for your feature or bug fix:
+   ```bash
+   git checkout -b my-feature
+   ```
+3. **Make the necessary changes** and commit your code:
+   ```bash
+   git commit -am 'Add new feature'
+   ```
+4. **Push the changes** to your forked repository:
+   ```bash
+   git push origin my-feature
+   ```
+5. **Submit a pull request** with a description of your changes.
