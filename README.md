@@ -1,123 +1,139 @@
 
 # Decentralized File Sharing Project (D-FILE)
 
-This repository contains the code for the **D-FILE** project, a decentralized file storage solution similar to Google Drive, built using **Hardhat**, **Solidity (Smart Contracts)**, and **React.js**. The application leverages blockchain technology to ensure secure and transparent storage and access control for files.
+This repository hosts the code for **D-FILE**, a decentralized file-sharing platform akin to Google Drive, developed using **Hardhat**, **Solidity (Smart Contracts)**, and **React.js**. By leveraging blockchain technology, **D-FILE** ensures secure, transparent, and decentralized file storage and access control.
 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
 - [Architecture](#architecture)
-- [Smart Contract](#smart-contract)
-- [Frontend](#frontend)
+- [Smart Contract Features](#smart-contract-features)
+- [Frontend Features](#frontend-features)
 - [Contributing](#contributing)
+- [License](#license)
+
+---
 
 ## Installation
 
-To set up and run the D-FILE project on your local machine, follow these steps:
+Follow these steps to set up and run the **D-FILE** project on your local machine:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/decentralized-gdrive.git
+   git clone https://github.com/pushpakrai/Decentralized-Blockchain-File-Sharing-Application.git
    ```
 
 2. **Navigate to the project directory**:
    ```bash
-   cd decentralized-gdrive
+   cd Decentralized-Blockchain-File-Sharing-Application
    ```
 
 3. **Install dependencies for the smart contract**:
-   - Ensure you have [Node.js](https://nodejs.org) installed.
-   - Install Hardhat:
-     ```bash
-     npm install hardhat
-     ```
+   ```bash
+   npm install
+   ```
 
-4. **Install dependencies for the frontend**:
-   - Navigate to the `frontend` directory:
+4. **Set up the frontend**:
+   - Navigate to the `client` directory:
      ```bash
-     cd frontend
+     cd client
      ```
    - Install the Node.js dependencies:
      ```bash
      npm install
      ```
 
+---
+
 ## Usage
 
-1. **Start a local blockchain network** using Hardhat:
+1. **Start a local blockchain network**:
    ```bash
    npx hardhat node
    ```
 
-2. **Deploy the smart contract** to the local network:
-   - Navigate to the project directory:
-     ```bash
-     cd decentralized-gdrive
-     ```
-   - Compile and deploy the smart contract:
+2. **Deploy the smart contract**:
+   - Compile and deploy the smart contract to the local network:
      ```bash
      npx hardhat run --network localhost scripts/deploy.js
      ```
 
-3. **Start the frontend development server**:
+3. **Launch the frontend application**:
    - Navigate to the `client` directory:
      ```bash
      cd client
      ```
-   - Run the development server:
+   - Start the development server:
      ```bash
      npm start
      ```
 
-4. **Open your browser** and go to `http://localhost:3000` to access the decentralized GDrive application.
+4. **Access the application**:
+   Open your browser and navigate to `http://localhost:3000`. Ensure MetaMask is connected to the local blockchain network.
 
-5. **Connect the frontend** to your local blockchain using MetaMask.
+---
 
 ## Architecture
 
-The **D-FILE** project is structured with the following key technologies:
+The **D-FILE** platform employs the following technologies:
 
-- **Hardhat**: A development environment for Ethereum smart contracts that facilitates testing, deployment, and contract interaction.
-- **Solidity (Smart Contract)**: The smart contract manages file storage, access control, and ownership directly on the blockchain.
-- **React.js**: The frontend is built using React.js, providing a responsive, user-friendly interface for interacting with the blockchain.
-- **Pinata**: Pinata is utilized as a decentralized file storage solution to securely store files.
+- **Hardhat**: Facilitates smart contract development, testing, and deployment.
+- **Solidity**: Implements the business logic for file storage, access control, and ownership management on the blockchain.
+- **React.js**: Provides an intuitive user interface for interacting with the decentralized file system.
+- **Pinata**: Used for decentralized file storage, ensuring redundancy and security.
 
-## Smart Contract
+---
 
-The smart contract, written in Solidity, handles the following functionality:
+## Smart Contract Features
 
-- **File Upload**: Files are uploaded to decentralized storage and linked to the blockchain.
-- **Access Control**: Ensures only authorized users can access, modify, or delete files.
-- **File Ownership**: Allows users to transfer file ownership securely through blockchain transactions.
+The Solidity smart contract handles core functionalities, including:
 
-The smart contract code can be found in the `contracts` directory.
+- **File Upload**: Links uploaded files to the blockchain and stores metadata securely.
+- **Access Control**: Grants or revokes permissions for specific users.
+- **Ownership Management**: Transfers file ownership securely between users.
+- **Tamper-Proof Logs**: Maintains immutable records of all file-related transactions.
 
-## Frontend
+The contract code is in the `contracts` directory.
 
-The frontend of **D-FILE** is built with React.js and communicates with the smart contract to provide the following features:
+---
 
-- **File Upload**: Users can upload files to decentralized storage.
-- **File Access**: Users can view and download files stored on the blockchain.
-- **Access Permissions**: Manage permissions to allow or restrict file access.
-- **Ownership Transfer**: Securely transfer file ownership to other users.
+## Frontend Features
 
-The frontend code is located in the `client` directory.
+The **D-FILE** frontend, built with React.js, offers:
+
+- **User Authentication**: Connect your wallet via MetaMask for secure access.
+- **File Management**:
+  - Upload and view files stored on the blockchain.
+  - Download files directly from decentralized storage.
+  - Delete or modify file permissions.
+- **Access Permissions**: Enable or restrict other users' access to specific files.
+- **Ownership Transfer**: Securely transfer file ownership to designated users.
+
+Frontend source code resides in the `client` directory.
+
+---
 
 ## Contributing
 
-We welcome contributions to the **D-FILE** project! To contribute:
+We welcome contributions to enhance the **D-FILE** project! Here's how to get involved:
 
 1. **Fork the repository**.
-2. **Create a new branch** for your feature or bug fix:
+2. **Create a feature branch**:
    ```bash
-   git checkout -b my-feature
+   git checkout -b feature-name
    ```
-3. **Make the necessary changes** and commit your code:
+3. **Implement changes** and commit:
    ```bash
-   git commit -am 'Add new feature'
+   git commit -m "Add feature description"
    ```
-4. **Push the changes** to your forked repository:
+4. **Push changes** to your forked repository:
    ```bash
-   git push origin my-feature
+   git push origin feature-name
    ```
-5. **Submit a pull request** with a description of your changes.
+5. **Open a pull request**, detailing your enhancements or fixes.
+
+---
+
+## License
+
+This project is licensed under the MIT License. For more details, refer to the [LICENSE](LICENSE) file.
